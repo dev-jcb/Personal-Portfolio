@@ -1,35 +1,56 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+import MainRouter from "../MainRouter";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  let section = document.querySelectorAll("section");
+  let menu = document.querySelectorAll("header nav a");
+
+  window.onscroll = () => {
+    section.forEach((i) => {
+      let top = window.scrollY;
+      let offset = i.offsetTop - 150;
+      let height = i.offsetHeight;
+      let id = i.getAttribute("id");
+
+      if (top >= offset && top < offset + height) {
+        menu.forEach((link) => {
+          link.classList.remove("active");
+          document
+            .querySelector("header nav a[href*=" + id + "]")
+            .classList.add("active");
+        });
+      }
+    });
+  };
+
+  function reveal() {
+    var reveals = document.querySelectorAll(".reveal");
+
+    for (var i = 0; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals[i].getBoundingClientRect().top;
+      var elementVisible = 150;
+
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("active");
+      } else {
+        reveals[i].classList.remove("active");
+      }
+    }
+  }
+
+  window.addEventListener("scroll", reveal);
+
+  // To check the scroll position on page load
+  reveal();
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <Router>
+      <MainRouter />
+    </Router>
+  );
 }
 
-export default App
+export default App;
