@@ -11,11 +11,6 @@ export default function NavigationBar() {
           <Link to="/projects">Project</Link>
           <Link to="/services">Services</Link>
           <Link to="/contact">Contact</Link>
-          {/* <a href="#home" className="active">Home</a>
-            <a href="#about" className="active">About</a>
-            <a href="#projects" className="active">Project</a>
-            <a href="#services" className="active">Services</a>
-            <a href="#contact" className="active">Contact</a> */}
         </nav>
       </header>
     </>
