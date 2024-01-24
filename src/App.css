@@ -18,7 +18,7 @@ header {
   left: 0;
   width: 100%;
   z-index: 1000;
-  background: #42455a;
+  background: #000000;
   padding: 20px;
   text-align: center;
   border-bottom: 1px solid #00c2cb;
@@ -38,7 +38,7 @@ header nav a.active {
   letter-spacing: 2px;
 }
 body {
-  background: #42455a;
+  background: #e1e1e1;
 }
 section {
   min-height: 100vh;
@@ -51,7 +51,7 @@ section:nth-child(1) {
 }
 section:nth-child(2) {
   color: #42455a;
-  background: #e0ffff;
+  background: #e1e1e1;
 }
 section:nth-child(3) {
   color: #e0ffff;

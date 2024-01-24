@@ -10,10 +10,13 @@ a {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background: #42455a;
+    background: #000000;
     padding: 20px;
     text-align: center;
     border-bottom: 1px solid #00c2cb;
+  }
+  header nav {
+    padding-top: 2%;
   }
   header nav a {
     padding: 10px 20px;

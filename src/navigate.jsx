@@ -5,12 +5,11 @@ export default function Navigate() {
   const location = useLocation();
 
   useEffect(() => {
-    let section = document.querySelectorAll("section");
+    let sectionElements = document.querySelectorAll("section");
     let menu = document.querySelectorAll("header nav a");
 
     window.locationchange = () => {
-      debugger;
-      section.forEach((i) => {
+      sectionElements.forEach((i) => {
         let top = window.scrollY;
         let offset = i.offsetTop - 150;
         let height = i.offsetHeight;
@@ -45,6 +44,7 @@ export default function Navigate() {
 
     window.addEventListener("locationchange", reveal);
 
+    //trigger on initial load of page
     reveal();
   }, [location]);
 }
