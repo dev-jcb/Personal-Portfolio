@@ -6,10 +6,13 @@ import Contact from "./src/contact";
 import Projects from "./src/projects";
 import About from "./src/about";
 import NavigationBar from "./components/NavigationBar";
+import Navigate from "./src/navigate";
 
 const MainRouter = () => {
   return (
     <div>
+
+    <Navigate/>
         <NavigationBar />
       <Routes>
         <Route exact path="/" element={<Home />} />
