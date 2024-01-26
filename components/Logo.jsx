@@ -1,4 +1,4 @@
-import logo from '../src/assets/img/sample-avatar.png';
+import logo from '../src/assets/img/fadeout-logo.png';
 import "./Logo.css";
 
 export default function Logo(){

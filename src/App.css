@@ -41,6 +41,7 @@ body {
   background: #e1e1e1;
 }
 section {
+  padding: 0 20% 0 20%;
   min-height: 100vh;
   display: flex;
   justify-content: center;
