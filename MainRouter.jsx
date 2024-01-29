@@ -11,7 +11,6 @@ import Navigate from "./src/navigate";
 const MainRouter = () => {
   return (
     <div>
-
     <Navigate/>
         <NavigationBar />
       <Routes>

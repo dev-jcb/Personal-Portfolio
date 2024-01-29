@@ -1,21 +1,43 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Logo from "./Logo";
-import "./NavigationBar.css";
 
 export default function NavigationBar() {
   return (
     <>
-      <header>
-        <Logo />
-        <nav>
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/projects">Project</Link>
-          <Link to="/services">Services</Link>
-          <Link to="/contact">Contact</Link>
-        </nav>
-      </header>
+      <nav className="fh5co-nav" role="navigation">
+        <div className="container-wrap">
+          <div className="top-menu">
+            <div className="row">
+              <div className="col-xs-2">
+                <div id="fh5co-logo">
+                  <Link to="/">JCB</Link>
+                </div>
+              </div>
+              <div className="col-xs-10 text-right menu-1">
+                <ul>
+                  <li>
+                    <Link className="active" to="/">
+                      Home
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/about">About</Link>
+                  </li>
+                  <li>
+                    <Link to="/projects">Project</Link>
+                  </li>
+                  <li>
+                    <Link to="/services">Services</Link>
+                  </li>
+                  <li>
+                    <Link to="/contact">Contact</Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
     </>
   );
 }
