@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Logo from "./Logo";
 
 export default function NavigationBar() {
   return (
@@ -8,11 +9,7 @@ export default function NavigationBar() {
         <div className="container-wrap">
           <div className="top-menu">
             <div className="row">
-              <div className="col-xs-2">
-                <div id="fh5co-logo">
-                  <Link to="/">JCB</Link>
-                </div>
-              </div>
+              <Logo />
               <div className="col-xs-10 text-right menu-1">
                 <ul>
                   <li>

@@ -1,10 +1,13 @@
-import logo from '../src/assets/img/fadeout-logo.png';
-import "./Logo.css";
+import { Link } from "react-router-dom";
 
-export default function Logo(){
-    return (
-        <div id="logo">
-            <img src={logo}/>
+export default function Logo() {
+  return (
+    <>
+      <div className="col-xs-2">
+        <div id="fh5co-logo">
+          <Link to="/">JCB</Link>
         </div>
-    )
+      </div>
+    </>
+  );
 }
