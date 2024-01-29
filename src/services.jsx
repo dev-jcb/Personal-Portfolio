@@ -1,4 +1,8 @@
 import Card from "react-bootstrap/Card";
+import WebDev from "./assets/img/web-dev.jpg";
+import MobileDev from "./assets/img/mobile-dev.png";
+import TechAdvising from "./assets/img/tech-advising.png";
+import PeopleManagement from "./assets/img/people-management.png";
 
 export default function Services() {
   return (
@@ -19,7 +23,7 @@ export default function Services() {
           <div className="row padding-bottom-percent-5 padding-top-percent-2">
             <div className="col-md-3 text-center">
               <Card>
-                <Card.Img variant="top" src="/src/assets/img/web-dev.jpg" />
+                <Card.Img variant="top" src={`${WebDev}`}/>
                 <Card.Body>
                   <Card.Title>Web Development</Card.Title>
                   <Card.Text>
@@ -32,7 +36,7 @@ export default function Services() {
             </div>
             <div className="col-md-3 text-center">
               <Card>
-                <Card.Img variant="top" src="/src/assets/img/mobile-dev.png" />
+                <Card.Img variant="top" src={`${MobileDev}`} />
                 <Card.Body>
                   <Card.Title>Mobile Development</Card.Title>
                   <Card.Text>
@@ -46,7 +50,7 @@ export default function Services() {
               <Card>
                 <Card.Img
                   variant="top"
-                  src="/src/assets/img/tech-advising.png"
+                  src={`${TechAdvising}`}
                 />
                 <Card.Body>
                   <Card.Title>Technical Advising</Card.Title>
@@ -61,7 +65,7 @@ export default function Services() {
               <Card>
                 <Card.Img
                   variant="top"
-                  src="/src/assets/img/people-management.png"
+                  src={`${PeopleManagement}`}
                 />
                 <Card.Body>
                   <Card.Title>People Management</Card.Title>
